@@ -35,7 +35,7 @@
             <TextField fx:id="hoursField" promptText="Agreed Hours"/>
             <DatePicker fx:id="deadlinePicker" promptText="Deadline" maxWidth="Infinity"/>
             
-            <Button fx:id="submitButton" text="Create Project" maxWidth="Infinity" onAction="#submitProject" style="-fx-background-color: #2e7d32; -fx-text-fill: white;"/>
+            <Button fx:id="submitButton" text="Create Project" maxWidth="Infinity" onAction="#submitProject" />
             <ProgressIndicator fx:id="loadingSpinner" visible="false"/>
         </VBox>
     </center>
