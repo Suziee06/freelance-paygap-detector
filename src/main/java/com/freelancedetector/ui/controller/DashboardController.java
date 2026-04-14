@@ -46,6 +46,11 @@ public class DashboardController {
     }
 
     @FXML
+    public void toggleTheme() {
+        com.freelancedetector.ui.utils.ThemeManager.toggleTheme();
+    }
+
+    @FXML
     public void goToMyProjects() {
         SceneManager.switchScene("/fxml/ProjectListScreen.fxml", "My Projects");
     }
