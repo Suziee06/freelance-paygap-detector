@@ -1,20 +1,21 @@
 /* LIGHT MODE (Global defaults bound directly to the Root) */
 .root {
-    -bg-color: #ffffff;
-    -text-color: #24292f;
-    -secondary-text: #57606a;
-    -canvas-color: #f6f8fa;
-    -border-color: #d0d7de;
+    -bg-color: #f0f4f8;
+    -text-color: #1a1a2e;
+    -secondary-text: #4a5568;
     
-    /* GitHub Accent Branding */
-    -accent-blue: #0969da;
-    -accent-blue-hover: #0353a4;
-    -accent-purple: #8250df;
+    /* Light Glassmorphism Base */
+    -canvas-color: rgba(255, 255, 255, 0.5);
+    -border-color: rgba(0, 0, 0, 0.1);
     
-    -input-bg: #f6f8fa;
-    -input-border: #d0d7de;
+    -accent-blue: #3182ce;
+    -accent-blue-hover: #4299e1;
+    -accent-purple: #805ad5;
     
-    -fx-background-image: url("../images/finance_tech_light_bg.png");
+    -input-bg: rgba(255, 255, 255, 0.6);
+    -input-border: rgba(0, 0, 0, 0.1);
+    
+    -fx-background-image: url("../images/glassmorphism_light_bg.png");
     -fx-background-size: cover;
     -fx-background-position: center;
     -fx-background-repeat: no-repeat;
@@ -25,38 +26,52 @@
 
 /* DARK MODE (Instantly overrides variables!) */
 .dark-mode {
-    -bg-color: transparent;
-    -text-color: #c9d1d9;
-    -secondary-text: #8b949e;
-    -canvas-color: #161b22;
-    -border-color: #30363d;
+    -bg-color: #050510;
+    -text-color: #ffffff;
+    -secondary-text: #a0aec0;
     
-    -accent-blue: #2f81f7;
-    -accent-blue-hover: #58a6ff;
+    /* Dark Cinematic Glassmorphism */
+    -canvas-color: rgba(15, 20, 35, 0.65);
+    -border-color: rgba(255, 255, 255, 0.12);
+    
+    /* Electric App Accents */
+    -accent-blue: #007bff;
+    -accent-blue-hover: #3399ff;
     -accent-purple: #bc8cff;
     
-    -input-bg: #0d1117;
-    -input-border: #30363d;
+    -input-bg: rgba(0, 0, 0, 0.4);
+    -input-border: rgba(255, 255, 255, 0.2);
     
-    -fx-background-image: url("../images/finance_tech_dark_bg.png");
+    -fx-background-image: url("../images/glassmorphism_dark_bg.png");
     
     -fx-background-color: -bg-color;
 }
 
 /* ======================================================= */
-/* Universal Elements that beautifully inherit the variables */
+/* Universal Elements */
 
 .label {
     -fx-text-fill: -text-color;
 }
 
-/* Input Fields styled identical to GitHub Login */
+.header-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -text-color;
+}
+
+.secondary-label {
+    -fx-text-fill: -secondary-text;
+    -fx-font-size: 13px;
+}
+
+/* Input Fields - Pill Shaped Holographic style! */
 .text-field, .password-field, .combo-box {
     -fx-background-color: -input-bg;
     -fx-border-color: -input-border;
-    -fx-border-radius: 6px;
-    -fx-background-radius: 6px;
-    -fx-padding: 8px 12px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-padding: 10px 15px;
     -fx-text-fill: -text-color;
 }
 
@@ -65,13 +80,13 @@
     -fx-border-width: 2px;
 }
 
-/* Core Brand Action Buttons */
+/* Core Brand Action Buttons - Pill Shaped */
 .button {
     -fx-background-color: -accent-blue;
     -fx-text-fill: white;
     -fx-font-weight: bold;
-    -fx-padding: 8px 16px;
-    -fx-background-radius: 6px;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 25px;
     -fx-border-color: transparent;
     -fx-cursor: hand;
 }
@@ -82,8 +97,6 @@
     -fx-scale-x: 1.05;
     -fx-scale-y: 1.05;
 }
-
-/* When physically clicked, it scales down for tactile feedback */
 .button:pressed {
     -fx-scale-x: 0.95;
     -fx-scale-y: 0.95;
@@ -94,31 +107,27 @@
     -fx-background-color: transparent;
     -fx-border-color: -accent-purple;
     -fx-text-fill: -accent-purple;
-    -fx-border-radius: 6px;
+    -fx-border-radius: 25px;
     -fx-border-width: 1px;
 }
-
 .theme-button:hover {
     -fx-background-color: -accent-purple;
     -fx-text-fill: white;
-    -fx-scale-x: 1.05;
-    -fx-scale-y: 1.05;
 }
 
 .hyperlink {
     -fx-text-fill: -accent-blue;
     -fx-underline: false;
 }
-
 .hyperlink:hover {
     -fx-underline: true;
 }
 
 /* ======================================================= */
-/* Interactive Floating Card Elements */
+/* Interactive Floating CARD Elements */
 
 .dashboard-top-bar {
-    -fx-background-color: -canvas-color;
+    -fx-background-color: rgba(5, 5, 10, 0.4);
     -fx-border-color: transparent transparent -border-color transparent;
     -fx-border-width: 1px;
 }
@@ -129,23 +138,22 @@
     -fx-border-width: 1px;
 }
 
-/* Beautiful Drop Shadow Interaction Cards */
+/* Beautiful Translucent Glass Cards */
 .summary-card, .login-card {
     -fx-background-color: -canvas-color;
     -fx-border-color: -border-color;
-    -fx-border-radius: 8px;
-    -fx-background-radius: 8px;
-    -fx-padding: 25px;
+    -fx-border-radius: 16px;
+    -fx-background-radius: 16px;
+    -fx-padding: 30px;
     -fx-cursor: hand;
 }
 
-/* Floating Lift Hover Effect */
+/* Floating Lift Outer Glow Effect */
 .summary-card:hover, .login-card:hover {
     -fx-scale-x: 1.02;
     -fx-scale-y: 1.02;
-    -fx-border-color: -accent-blue;
-    /* JavaFX specific drop shadow engine bindings */
-    -fx-effect: dropshadow(three-pass-box, rgba(9, 105, 218, 0.4), 15, 0.1, 0, 5);
+    -fx-border-color: rgba(255, 255, 255, 0.4);
+    -fx-effect: dropshadow(three-pass-box, -accent-blue, 30, 0.2, 0, 0); /* Intense outer glow! */
 }
 
 /* ======================================================= */
