@@ -26,21 +26,22 @@
 
 /* DARK MODE (Instantly overrides variables!) */
 .dark-mode {
-    -bg-color: #050510;
+    -bg-color: #000000;
     -text-color: #ffffff;
-    -secondary-text: #a0aec0;
+    -secondary-text: #9ca3af;
     
-    /* Dark Cinematic Glassmorphism */
-    -canvas-color: rgba(15, 20, 35, 0.65);
-    -border-color: rgba(255, 255, 255, 0.12);
+    /* Dark Cinematic Glassmorphism - Sheer like Imagica */
+    -canvas-color: rgba(0, 0, 0, 0.35);
+    -border-color: rgba(255, 255, 255, 0.15);
     
-    /* Electric App Accents */
-    -accent-primary: #8b5cf6;
-    -accent-primary-hover: #a78bfa;
-    -accent-purple: #bc8cff;
+    /* Vivid Imagica Violet/Purple Accents */
+    -accent-primary: #7c3aed;
+    -accent-primary-hover: #9333ea;
+    -accent-purple: #c084fc;
     
-    -input-bg: rgba(0, 0, 0, 0.4);
-    -input-border: rgba(255, 255, 255, 0.2);
+    /* Hollow pill inputs just like the Imagica search bar */
+    -input-bg: rgba(0, 0, 0, 0.2);
+    -input-border: rgba(255, 255, 255, 0.3);
     
     -fx-background-image: url("../images/glassmorphism_dark_bg.png");
     
@@ -152,8 +153,8 @@
 .summary-card:hover, .login-card:hover {
     -fx-scale-x: 1.02;
     -fx-scale-y: 1.02;
-    -fx-border-color: rgba(255, 255, 255, 0.4);
-    -fx-effect: dropshadow(three-pass-box, -accent-primary, 30, 0.2, 0, 0); /* Intense outer glow! */
+    -fx-border-color: rgba(255, 255, 255, 0.6);
+    -fx-effect: dropshadow(three-pass-box, -accent-primary, 40, 0.3, 0, 0); /* Intense Violet Glow! */
 }
 
 /* ======================================================= */
