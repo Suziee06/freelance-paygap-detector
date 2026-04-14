@@ -192,3 +192,79 @@
 .table-row-cell:selected .table-cell {
     -fx-text-fill: white;
 }
+
+/* ======================================================= */
+/* Exact Imagica Screen Structure Replicas */
+
+.nav-link {
+    -fx-text-fill: #9ca3af;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+}
+.nav-link:hover {
+    -fx-text-fill: white;
+}
+
+.imagica-subtitle {
+     -fx-font-size: 12px;
+     -fx-text-fill: #9ca3af;
+     -fx-font-weight: bold;
+     -fx-font-family: monospace;
+}
+
+.imagica-title {
+    -fx-font-size: 52px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+}
+
+.imagica-input {
+    -fx-background-color: transparent;
+    -fx-border-color: rgba(255, 255, 255, 0.25);
+    -fx-border-radius: 40px;
+    -fx-background-radius: 40px;
+    -fx-padding: 15px 30px;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+}
+.imagica-input:focused {
+    -fx-border-color: rgba(255, 255, 255, 0.7);
+    -fx-border-width: 1px;
+}
+
+.imagica-primary-button {
+    -fx-background-color: transparent;
+    -fx-border-color: rgba(255, 255, 255, 0.25);
+    -fx-text-fill: white;
+    -fx-border-radius: 40px;
+    -fx-background-radius: 40px;
+    -fx-padding: 15px 30px;
+    -fx-font-weight: normal;
+    -fx-font-size: 15px;
+    -fx-cursor: hand;
+}
+.imagica-primary-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+    -fx-border-color: rgba(255, 255, 255, 0.7);
+}
+
+.imagica-enterprise-btn {
+    -fx-background-color: transparent;
+    -fx-border-color: rgba(255, 255, 255, 0.3);
+    -fx-text-fill: white;
+    -fx-border-radius: 30px;
+    -fx-padding: 8px 20px;
+    -fx-cursor: hand;
+}
+.imagica-enterprise-btn:hover {
+    -fx-border-color: white;
+}
+
+.imagica-demo-link {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 13px;
+    -fx-underline: false;
+}
+.imagica-demo-link:hover {
+    -fx-underline: true;
+}

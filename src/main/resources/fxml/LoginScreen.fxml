@@ -2,19 +2,45 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" spacing="15.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.freelancedetector.ui.controller.LoginController">
-    <HBox alignment="CENTER_RIGHT" prefWidth="100" style="-fx-padding: 20;">
-        <Button text="🌓 Switch Theme" onAction="#toggleTheme" styleClass="theme-button"/>
-    </HBox>
-
-    <Label text="Freelance Pay Gap Detector" styleClass="header-label" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
-    <Label fx:id="statusLabel" textFill="red"/>
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.freelancedetector.ui.controller.LoginController" style="-fx-background-color: transparent;">
     
-    <VBox maxWidth="350" spacing="15.0" styleClass="login-card" alignment="CENTER">
-        <TextField fx:id="emailField" promptText="Email Address"/>
-        <PasswordField fx:id="passwordField" promptText="Password"/>
-        <Button fx:id="loginButton" text="Login" maxWidth="Infinity" onAction="#handleLogin"/>
-        <Hyperlink text="Don't have an account? Register here." onAction="#goToRegister" />
-        <ProgressIndicator fx:id="loadingSpinner" visible="false" maxWidth="20"/>
-    </VBox>
-</VBox>
+    <!-- TOP NAV IMAGICA STYLE -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="30" style="-fx-padding: 30 50 20 50;">
+            <Label text="◯ Detector" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px;"/>
+            <Region HBox.hgrow="ALWAYS" />
+            <HBox spacing="35" alignment="CENTER">
+                <Label text="Product" styleClass="nav-link"/>
+                <Label text="How it works" styleClass="nav-link"/>
+                <Label text="Features" styleClass="nav-link"/>
+                <Label text="Mission" styleClass="nav-link"/>
+                <Label text="Company" styleClass="nav-link"/>
+            </HBox>
+            <Region HBox.hgrow="ALWAYS" />
+            <Button text="🌓 Theme" styleClass="imagica-enterprise-btn" onAction="#toggleTheme"/>
+        </HBox>
+    </top>
+
+    <!-- CENTER IMAGICA SEARCH AREA -->
+    <center>
+        <VBox alignment="CENTER" spacing="12.0">
+            <Label text="BUILD A FAIR FREELANCE APP IN MINUTES" styleClass="imagica-subtitle"/>
+            
+            <Label text="A new way to think and detect&#10;with computers" textAlignment="CENTER" styleClass="imagica-title"/>
+            
+            <Region prefHeight="40" />
+            
+            <Label fx:id="statusLabel" textFill="red"/>
+            
+            <!-- Identical hollow pill format -->
+            <VBox spacing="15" alignment="CENTER" maxWidth="450">
+                <TextField fx:id="emailField" promptText="adamdriver@gmail.com" styleClass="imagica-input" alignment="CENTER"/>
+                <PasswordField fx:id="passwordField" promptText="Secure Password" styleClass="imagica-input" alignment="CENTER"/>
+                <Button fx:id="loginButton" text="Login" maxWidth="Infinity" onAction="#handleLogin" styleClass="imagica-primary-button"/>
+                <Hyperlink text="Play Video Demo (Register)" onAction="#goToRegister" styleClass="imagica-demo-link" style="-fx-padding: 50 0 0 0;"/>
+                <ProgressIndicator fx:id="loadingSpinner" visible="false" maxWidth="20"/>
+            </VBox>
+        </VBox>
+    </center>
+    
+</BorderPane>
