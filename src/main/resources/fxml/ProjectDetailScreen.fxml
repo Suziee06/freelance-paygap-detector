@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.freelancedetector.ui.controller.ProjectDetailController">
+    <top>
+        <HBox style="-fx-padding: 15; -fx-background-color: #333333;">
+            <Button text="← Back to List" onAction="#goBack"/>
+            <Region HBox.hgrow="ALWAYS" />
+            <Label text="Project Details" textFill="WHITE" style="-fx-font-size: 18px;"/>
+        </HBox>
+    </top>
+    <center>
+        <TabPane tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Overview">
+                    <VBox spacing="10" style="-fx-padding: 20;">
+                        <Label text="Project Information Placeholder" style="-fx-font-size: 16px;"/>
+                    </VBox>
+                </Tab>
+                <Tab text="Payments">
+                    <VBox spacing="10" style="-fx-padding: 20;">
+                        <Button text="+ Log Payment" onAction="#addPayment"/>
+                        <ListView VBox.vgrow="ALWAYS"/>
+                    </VBox>
+                </Tab>
+                <Tab text="Work Logs">
+                    <VBox spacing="10" style="-fx-padding: 20;">
+                        <Button text="+ Add Work Log" onAction="#addWorkLog"/>
+                        <ListView VBox.vgrow="ALWAYS"/>
+                    </VBox>
+                </Tab>
+                <Tab text="Analysis">
+                    <VBox spacing="10" style="-fx-padding: 20;">
+                        <Label text="Risk Analysis Assessment Placeholder" style="-fx-font-size: 16px;"/>
+                    </VBox>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+</BorderPane>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.freelancedetector.ui.controller.ProjectListController">
+    <top>
+        <HBox style="-fx-padding: 15; -fx-background-color: #333333;">
+            <Button text="← Back to Dashboard" onAction="#goBack"/>
+            <Region HBox.hgrow="ALWAYS" />
+            <Label text="My Projects" textFill="WHITE" style="-fx-font-size: 18px;"/>
+        </HBox>
+    </top>
+    <center>
+        <VBox spacing="10" style="-fx-padding: 20;">
+            <Label text="Double-click a project to view details and logs." textFill="gray"/>
+            <ProgressIndicator fx:id="loadingSpinner" visible="false"/>
+            
+            <TableView fx:id="projectTable" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="titleCol" text="Title" prefWidth="200"/>
+                    <TableColumn fx:id="typeCol" text="Type" prefWidth="120"/>
+                    <TableColumn fx:id="amountCol" text="Agreed Amount" prefWidth="120"/>
+                    <TableColumn fx:id="statusCol" text="Status" prefWidth="100"/>
+                    <TableColumn fx:id="riskCol" text="Risk Level" prefWidth="100"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>

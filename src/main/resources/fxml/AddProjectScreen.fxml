@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.freelancedetector.ui.controller.AddProjectController">
+    <top>
+        <HBox style="-fx-padding: 15; -fx-background-color: #333333;">
+            <Button text="← Back to Dashboard" onAction="#goBack"/>
+            <Region HBox.hgrow="ALWAYS" />
+            <Label text="Add New Project" textFill="WHITE" style="-fx-font-size: 18px;"/>
+        </HBox>
+    </top>
+    <center>
+        <VBox alignment="CENTER" spacing="15" style="-fx-padding: 30;" maxWidth="400">
+            <TextField fx:id="titleField" promptText="Project Title"/>
+            <TextField fx:id="clientNameField" promptText="Client Name"/>
+            
+            <ComboBox fx:id="typeBox" promptText="Project Type" maxWidth="Infinity">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Web Dev"/>
+                        <String fx:value="Mobile App"/>
+                        <String fx:value="Graphic Design"/>
+                        <String fx:value="Content Writing"/>
+                        <String fx:value="Data Analysis"/>
+                        <String fx:value="UI/UX"/>
+                        <String fx:value="Other"/>
+                    </FXCollections>
+                </items>
+            </ComboBox>
+
+            <TextField fx:id="amountField" promptText="Agreed Amount (USD)"/>
+            <TextField fx:id="hoursField" promptText="Agreed Hours"/>
+            <DatePicker fx:id="deadlinePicker" promptText="Deadline" maxWidth="Infinity"/>
+            
+            <Button fx:id="submitButton" text="Create Project" maxWidth="Infinity" onAction="#submitProject" style="-fx-background-color: #2e7d32; -fx-text-fill: white;"/>
+            <ProgressIndicator fx:id="loadingSpinner" visible="false"/>
+        </VBox>
+    </center>
+</BorderPane>
