@@ -1,0 +1,15 @@
+INSERT INTO benchmark_rate (role, average_hourly_rate) VALUES ('Software Engineer', 50.00);
+INSERT INTO benchmark_rate (role, average_hourly_rate) VALUES ('Frontend Web Developer', 35.00);
+INSERT INTO benchmark_rate (role, average_hourly_rate) VALUES ('Backend Web Developer', 40.00);
+INSERT INTO benchmark_rate (role, average_hourly_rate) VALUES ('Graphic Designer', 25.00);
+INSERT INTO benchmark_rate (role, average_hourly_rate) VALUES ('UX/UI Designer', 45.00);
+INSERT INTO benchmark_rate (role, average_hourly_rate) VALUES ('Copywriter', 30.00);
+INSERT INTO benchmark_rate (role, average_hourly_rate) VALUES ('SEO Specialist', 30.00);
+INSERT INTO benchmark_rate (role, average_hourly_rate) VALUES ('Digital Marketer', 35.00);
+INSERT INTO benchmark_rate (role, average_hourly_rate) VALUES ('Data Analyst', 40.00);
+INSERT INTO benchmark_rate (role, average_hourly_rate) VALUES ('Virtual Assistant', 15.00);
+INSERT INTO benchmark_rate (role, average_hourly_rate) VALUES ('Video Editor', 35.00);
+INSERT INTO benchmark_rate (role, average_hourly_rate) VALUES ('Translation/Localization', 25.00);
+INSERT INTO benchmark_rate (role, average_hourly_rate) VALUES ('Customer Support Agent', 12.00);
+INSERT INTO benchmark_rate (role, average_hourly_rate) VALUES ('Mobile App Developer', 45.00);
+INSERT INTO benchmark_rate (role, average_hourly_rate) VALUES ('Project Manager', 40.00);
