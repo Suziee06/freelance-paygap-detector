@@ -7,7 +7,7 @@
     <!-- TOP NAV IMAGICA STYLE -->
     <top>
         <HBox alignment="CENTER_LEFT" spacing="30" style="-fx-padding: 30 50 20 50;">
-            <Label text="◯ Detector" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px;"/>
+            <Label text="◯ Detector" styleClass="imagica-logo"/>
             <Region HBox.hgrow="ALWAYS" />
             <Button text="🌓 Theme" styleClass="imagica-enterprise-btn" onAction="#toggleTheme"/>
         </HBox>

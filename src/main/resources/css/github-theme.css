@@ -12,6 +12,11 @@
     -accent-primary-hover: #8b5cf6;
     -accent-purple: #805ad5;
     
+    /* Imagica Dynamic Form Opacities */
+    -imagica-border: rgba(0, 0, 0, 0.25);
+    -imagica-border-focus: rgba(0, 0, 0, 0.7);
+    -imagica-btn-hover-bg: rgba(0, 0, 0, 0.05);
+    
     -input-bg: rgba(255, 255, 255, 0.6);
     -input-border: rgba(0, 0, 0, 0.1);
     
@@ -38,6 +43,11 @@
     -accent-primary: #7c3aed;
     -accent-primary-hover: #9333ea;
     -accent-purple: #c084fc;
+    
+    /* Imagica Dynamic Form Opacities */
+    -imagica-border: rgba(255, 255, 255, 0.25);
+    -imagica-border-focus: rgba(255, 255, 255, 0.7);
+    -imagica-btn-hover-bg: rgba(255, 255, 255, 0.05);
     
     /* Hollow pill inputs just like the Imagica search bar */
     -input-bg: rgba(0, 0, 0, 0.2);
@@ -196,18 +206,15 @@
 /* ======================================================= */
 /* Exact Imagica Screen Structure Replicas */
 
-.nav-link {
-    -fx-text-fill: #9ca3af;
-    -fx-font-size: 13px;
-    -fx-cursor: hand;
-}
-.nav-link:hover {
-    -fx-text-fill: white;
+.imagica-logo {
+    -fx-text-fill: -text-color;
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
 }
 
 .imagica-subtitle {
      -fx-font-size: 12px;
-     -fx-text-fill: #9ca3af;
+     -fx-text-fill: -secondary-text;
      -fx-font-weight: bold;
      -fx-font-family: monospace;
 }
@@ -215,27 +222,27 @@
 .imagica-title {
     -fx-font-size: 52px;
     -fx-font-weight: bold;
-    -fx-text-fill: #ffffff;
+    -fx-text-fill: -text-color;
 }
 
 .imagica-input {
     -fx-background-color: transparent;
-    -fx-border-color: rgba(255, 255, 255, 0.25);
+    -fx-border-color: -imagica-border;
     -fx-border-radius: 40px;
     -fx-background-radius: 40px;
     -fx-padding: 15px 30px;
-    -fx-text-fill: white;
+    -fx-text-fill: -text-color;
     -fx-font-size: 15px;
 }
 .imagica-input:focused {
-    -fx-border-color: rgba(255, 255, 255, 0.7);
+    -fx-border-color: -imagica-border-focus;
     -fx-border-width: 1px;
 }
 
 .imagica-primary-button {
     -fx-background-color: transparent;
-    -fx-border-color: rgba(255, 255, 255, 0.25);
-    -fx-text-fill: white;
+    -fx-border-color: -imagica-border;
+    -fx-text-fill: -text-color;
     -fx-border-radius: 40px;
     -fx-background-radius: 40px;
     -fx-padding: 15px 30px;
@@ -244,24 +251,24 @@
     -fx-cursor: hand;
 }
 .imagica-primary-button:hover {
-    -fx-background-color: rgba(255, 255, 255, 0.05);
-    -fx-border-color: rgba(255, 255, 255, 0.7);
+    -fx-background-color: -imagica-btn-hover-bg;
+    -fx-border-color: -imagica-border-focus;
 }
 
 .imagica-enterprise-btn {
     -fx-background-color: transparent;
-    -fx-border-color: rgba(255, 255, 255, 0.3);
-    -fx-text-fill: white;
+    -fx-border-color: -imagica-border;
+    -fx-text-fill: -text-color;
     -fx-border-radius: 30px;
     -fx-padding: 8px 20px;
     -fx-cursor: hand;
 }
 .imagica-enterprise-btn:hover {
-    -fx-border-color: white;
+    -fx-border-color: -text-color;
 }
 
 .imagica-demo-link {
-    -fx-text-fill: #ffffff;
+    -fx-text-fill: -text-color;
     -fx-font-size: 13px;
     -fx-underline: false;
 }
