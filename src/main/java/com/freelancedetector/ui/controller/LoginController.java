@@ -65,6 +65,11 @@ public class LoginController {
         SceneManager.switchScene("/fxml/RegisterScreen.fxml", "Register");
     }
 
+    @FXML
+    public void toggleTheme() {
+        com.freelancedetector.ui.utils.ThemeManager.toggleTheme();
+    }
+
     private void showAlert(String title, String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle(title);

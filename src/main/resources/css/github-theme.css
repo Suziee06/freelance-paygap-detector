@@ -1,0 +1,108 @@
+/* LIGHT MODE (Global defaults bound directly to the Root) */
+.root {
+    -bg-color: #ffffff;
+    -text-color: #24292f;
+    -secondary-text: #57606a;
+    -canvas-color: #f6f8fa;
+    -border-color: #d0d7de;
+    
+    /* GitHub Accent Branding */
+    -accent-blue: #0969da;
+    -accent-blue-hover: #0353a4;
+    -accent-purple: #8250df;
+    
+    -input-bg: #f6f8fa;
+    -input-border: #d0d7de;
+    
+    -fx-background-color: -bg-color;
+    -fx-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+/* DARK MODE (Instantly overrides variables!) */
+.dark-mode {
+    -bg-color: #0d1117;
+    -text-color: #c9d1d9;
+    -secondary-text: #8b949e;
+    -canvas-color: #161b22;
+    -border-color: #30363d;
+    
+    -accent-blue: #2f81f7;
+    -accent-blue-hover: #58a6ff;
+    -accent-purple: #bc8cff;
+    
+    -input-bg: #0d1117;
+    -input-border: #30363d;
+    
+    -fx-background-color: -bg-color;
+}
+
+/* ======================================================= */
+/* Universal Elements that beautifully inherit the variables */
+
+.label {
+    -fx-text-fill: -text-color;
+}
+
+/* Input Fields styled identical to GitHub Login */
+.text-field, .password-field, .combo-box {
+    -fx-background-color: -input-bg;
+    -fx-border-color: -input-border;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 8px 12px;
+    -fx-text-fill: -text-color;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: -accent-blue;
+    -fx-border-width: 2px;
+}
+
+/* Core Brand Action Buttons */
+.button {
+    -fx-background-color: -accent-blue;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 16px;
+    -fx-background-radius: 6px;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+}
+
+/* >>> THE POPPING HOVER EFFECT ! <<< */
+.button:hover {
+    -fx-background-color: -accent-blue-hover;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* When physically clicked, it scales down for tactile feedback */
+.button:pressed {
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+
+/* GitHub Signature Purple Highlight Button (For our Theme Switcher!) */
+.theme-button {
+    -fx-background-color: transparent;
+    -fx-border-color: -accent-purple;
+    -fx-text-fill: -accent-purple;
+    -fx-border-radius: 6px;
+    -fx-border-width: 1px;
+}
+
+.theme-button:hover {
+    -fx-background-color: -accent-purple;
+    -fx-text-fill: white;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.hyperlink {
+    -fx-text-fill: -accent-blue;
+    -fx-underline: false;
+}
+
+.hyperlink:hover {
+    -fx-underline: true;
+}

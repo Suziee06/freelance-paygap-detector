@@ -18,7 +18,12 @@ public class SceneManager {
         Platform.runLater(() -> {
             try {
                 Parent root = FXMLLoader.load(SceneManager.class.getResource(fxmlFile));
-                mainStage.setScene(new Scene(root));
+                Scene scene = new Scene(root);
+                
+                // Boom! Globally applied CSS that listens to Dark/Light mode instantly!
+                ThemeManager.applyTheme(scene);
+                
+                mainStage.setScene(scene);
                 mainStage.setTitle(title);
                 mainStage.show();
             } catch (IOException e) {
