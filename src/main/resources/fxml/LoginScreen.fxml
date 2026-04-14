@@ -9,14 +9,6 @@
         <HBox alignment="CENTER_LEFT" spacing="30" style="-fx-padding: 30 50 20 50;">
             <Label text="◯ Detector" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 18px;"/>
             <Region HBox.hgrow="ALWAYS" />
-            <HBox spacing="35" alignment="CENTER">
-                <Label text="Product" styleClass="nav-link"/>
-                <Label text="How it works" styleClass="nav-link"/>
-                <Label text="Features" styleClass="nav-link"/>
-                <Label text="Mission" styleClass="nav-link"/>
-                <Label text="Company" styleClass="nav-link"/>
-            </HBox>
-            <Region HBox.hgrow="ALWAYS" />
             <Button text="🌓 Theme" styleClass="imagica-enterprise-btn" onAction="#toggleTheme"/>
         </HBox>
     </top>
@@ -24,9 +16,7 @@
     <!-- CENTER IMAGICA SEARCH AREA -->
     <center>
         <VBox alignment="CENTER" spacing="12.0">
-            <Label text="BUILD A FAIR FREELANCE APP IN MINUTES" styleClass="imagica-subtitle"/>
-            
-            <Label text="A new way to think and detect&#10;with computers" textAlignment="CENTER" styleClass="imagica-title"/>
+            <Label text="Freelance Pay Gap Detector" textAlignment="CENTER" styleClass="imagica-title"/>
             
             <Region prefHeight="40" />
             
@@ -37,7 +27,7 @@
                 <TextField fx:id="emailField" promptText="adamdriver@gmail.com" styleClass="imagica-input" alignment="CENTER"/>
                 <PasswordField fx:id="passwordField" promptText="Secure Password" styleClass="imagica-input" alignment="CENTER"/>
                 <Button fx:id="loginButton" text="Login" maxWidth="Infinity" onAction="#handleLogin" styleClass="imagica-primary-button"/>
-                <Hyperlink text="Play Video Demo (Register)" onAction="#goToRegister" styleClass="imagica-demo-link" style="-fx-padding: 50 0 0 0;"/>
+                <Hyperlink text="Create an account" onAction="#goToRegister" styleClass="imagica-demo-link" style="-fx-padding: 30 0 0 0;"/>
                 <ProgressIndicator fx:id="loadingSpinner" visible="false" maxWidth="20"/>
             </VBox>
         </VBox>
