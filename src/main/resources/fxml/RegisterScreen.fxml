@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<VBox alignment="CENTER" spacing="15.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.freelancedetector.ui.controller.RegisterController">
+    <Label text="Create an Account" style="-fx-font-size: 20px;"/>
+    
+    <VBox maxWidth="300" spacing="10.0">
+        <TextField fx:id="nameField" promptText="Full Name"/>
+        <TextField fx:id="emailField" promptText="Email Address"/>
+        <PasswordField fx:id="passwordField" promptText="Password"/>
+        <ComboBox fx:id="genderBox" promptText="Select Gender" maxWidth="Infinity">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Male"/>
+                    <String fx:value="Female"/>
+                    <String fx:value="Non-binary"/>
+                    <String fx:value="Prefer not to say"/>
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <Button fx:id="registerButton" text="Register" maxWidth="Infinity" onAction="#handleRegister"/>
+        <Hyperlink text="Already have an account? Login here." onAction="#goToLogin" />
+        <ProgressIndicator fx:id="loadingSpinner" visible="false" maxWidth="20"/>
+    </VBox>
+</VBox>

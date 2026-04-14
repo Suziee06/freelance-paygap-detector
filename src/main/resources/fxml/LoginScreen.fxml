@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="15.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.freelancedetector.ui.controller.LoginController">
+    <Label text="Freelance Pay Gap Detector" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+    <Label fx:id="statusLabel" textFill="red"/>
+    
+    <VBox maxWidth="300" spacing="10.0">
+        <TextField fx:id="emailField" promptText="Email Address"/>
+        <PasswordField fx:id="passwordField" promptText="Password"/>
+        <Button fx:id="loginButton" text="Login" maxWidth="Infinity" onAction="#handleLogin"/>
+        <Hyperlink text="Don't have an account? Register here." onAction="#goToRegister" />
+        <ProgressIndicator fx:id="loadingSpinner" visible="false" maxWidth="20"/>
+    </VBox>
+</VBox>
