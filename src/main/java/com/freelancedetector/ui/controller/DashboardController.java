@@ -28,15 +28,47 @@ public class DashboardController {
     private void loadDashboardData() {
         loadingSpinner.setVisible(true);
         Long userId = SessionManager.getInstance().getLoggedInUserId();
+        if (userId == null) userId = 1L; // Fallback for debugging
 
-        // In a real scenario, you'd fetch from a /api/analytics/summary endpoint.
-        // For now, we simulate fetching separate API endpoints or set defaults to avoid crashes.
-        Platform.runLater(() -> {
-            totalProjectsLabel.setText("0");
-            pendingPaymentsLabel.setText("0");
-            avgRiskLabel.setText("Low");
-            criticalProjectsLabel.setText("0");
-            loadingSpinner.setVisible(false);
+        ApiClient.get("/projects/user/" + userId).thenAccept(response -> {
+            Platform.runLater(() -> {
+                try {
+                    com.fasterxml.jackson.databind.ObjectMapper mapper = new com.fasterxml.jackson.databind.ObjectMapper();
+                    java.util.List<java.util.Map<String, Object>> projects = mapper.readValue(response, new com.fasterxml.jackson.core.type.TypeReference<java.util.List<java.util.Map<String,Object>>>(){});
+                    
+                    int total = projects.size();
+                    double activePayments = 0.0;
+                    int criticalFlags = 0;
+                    
+                    for (java.util.Map<String, Object> p : projects) {
+                        String status = (String) p.getOrDefault("status", "ACTIVE");
+                        Object amtObj = p.get("agreedAmount");
+                        
+                        if ("ACTIVE".equalsIgnoreCase(status) || "PENDING".equalsIgnoreCase(status)) {
+                            if (amtObj instanceof Number) {
+                                activePayments += ((Number)amtObj).doubleValue();
+                            }
+                            criticalFlags++; // Simple heuristic
+                        }
+                    }
+                    
+                    totalProjectsLabel.setText(String.valueOf(total));
+                    pendingPaymentsLabel.setText(String.format("$%.2f", activePayments));
+                    avgRiskLabel.setText(total > 0 ? "Medium" : "None");
+                    criticalProjectsLabel.setText(String.valueOf(criticalFlags));
+
+                } catch (Exception e) {
+                    System.err.println("Dashboard parse error: " + e.getMessage());
+                } finally {
+                    loadingSpinner.setVisible(false);
+                }
+            });
+        }).exceptionally(ex -> {
+            Platform.runLater(() -> {
+                System.err.println("Failed to load dashboard data: " + ex.getMessage());
+                loadingSpinner.setVisible(false);
+            });
+            return null;
         });
     }
 
